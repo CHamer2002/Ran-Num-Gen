@@ -22,3 +22,8 @@ class D8(Die):
 class D10(Die):
     def __init__(self):
         super().__init__(10)
+
+class D12(Die):
+    def __init__(self):
+        super().__init__(12)
+
