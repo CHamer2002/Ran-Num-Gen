@@ -14,3 +14,8 @@ class D4(Die):
 class D6(Die):
     def __init__(self):
         super().__init__(6)
+
+class D8(Die):
+    def __init__(self):
+        super().__init__(8)
+
