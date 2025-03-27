@@ -27,3 +27,6 @@ class D12(Die):
     def __init__(self):
         super().__init__(12)
 
+class D20(Die):
+    def __init__(self):
+        super().__init__(20)
