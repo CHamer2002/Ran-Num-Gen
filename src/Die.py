@@ -36,7 +36,8 @@ class D20(Die):
 def roll_multiple_dice(num_dice, dice_type):
     dice = [dice_type() for _ in range(num_dice)]
     results = [die.roll() for die in dice]
-    return results
+    total = sum(results)
+    return results, total
 
 def main():
     num_dice = int(input("How many dice would you like to roll? "))
@@ -58,10 +59,13 @@ def main():
         print("Invalid die type. Defaulting to D6")
         dice_type = D6
 
-    results = roll_multiple_dice(num_dice, dice_type)
+    results, total = roll_multiple_dice(num_dice, dice_type)
     print(f"\nYou rolled {num_dice} {die_type} dice")
+
     for i, result in enumerate(results, 1):
         print(f"Die {i}: {result}")
+
+    print(f"\nTotal: {total}")
 
 if __name__ == "__main__":
     main()
